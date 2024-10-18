@@ -1,0 +1,105 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Change the navbar background to black */
+.navbar {
+    background-color: #312d2d !important;
+}
+
+/* Make all navbar text white */
+.navbar .nav-link, .navbar .navbar-brand {
+    color: #ffffff !important;
+    font-family: 'Arial', sans-serif; 
+    font-size: 20px; 
+}
+
+.navbar .navbar-brand {
+    color: #ffffff !important;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 32px; 
+    font-weight: bold;
+}
+
+/* Change only "lio" part of "Portfolio" to blue */
+.navbar .navbar-brand .text-blue {
+    color: #007bff !important; 
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 32px; 
+    font-weight: bold; 
+}
+
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar becomes transparent when scrolled down */
+.navbar {
+    background-color: rgba(49, 45, 45, 0.8); /* Initial background color */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.navbar.transparent {
+    background-color: transparent; /* Background becomes transparent */
+}
+
+
+/* Change the color of all three lines in the navbar toggler to white */
+.navbar-light .navbar-toggler-icon {
+    background-image: none; /* Remove the default icon */
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    position: relative;
+}
+
+.navbar-light .navbar-toggler-icon::before,
+.navbar-light .navbar-toggler-icon::after,
+.navbar-light .navbar-toggler-icon div {
+    content: '';
+    background-color: white; /* Change the color to white */
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.4s;
+}
+
+/* Top line */
+.navbar-light .navbar-toggler-icon::before {
+    top: 0;
+}
+
+/* Bottom line */
+.navbar-light .navbar-toggler-icon::after {
+    bottom: 0;
+}
+
+/* Middle line (add this div inside the HTML toggler) */
+.navbar-light .navbar-toggler-icon div {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-toggler:focus, 
+.navbar-toggler:active, 
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Background image Responsive */
+.bg-image {
+    background-image: url('images/bg1.png');
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Centers the image */
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+}
+
+
+
+
+
+
+
