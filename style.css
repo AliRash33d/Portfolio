@@ -28,20 +28,15 @@
     font-weight: bold; 
 }
 
-.nav-link{
+.nav-link {
     font-family: 'Poppins', sans-serif;
+    color: #ffffff !important; /* Keep this color */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition */
 }
 
-/* Navbar becomes transparent when scrolled down */
-.navbar {
-    background-color: rgba(49, 45, 45, 0.8); /* Initial background color */
-    transition: background-color 0.3s ease; /* Smooth transition effect */
+.nav-link:hover {
+    color: #007bff !important; /* Color on hover with !important */
 }
-
-.navbar.transparent {
-    background-color: transparent; /* Background becomes transparent */
-}
-
 
 /* Change the color of all three lines in the navbar toggler to white */
 .navbar-light .navbar-toggler-icon {
@@ -88,14 +83,260 @@
     border: none !important;
 }
 
-/* Background image Responsive */
-.bg-image {
-    background-image: url('images/bg1.png');
-    background-size: cover; /* Ensures the image covers the div */
-    background-position: center; /* Centers the image */
-    height: 100vh; /* Full height of the viewport */
-    width: 100%; /* Full width of the viewport */
+/* Hero Section */
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("https://i.ibb.co/0cSVLJH/bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .masthead h1, .masthead .h1 {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .masthead h2, .masthead .h2 {
+    max-width: 20rem;
+    font-size: 1rem;
+  }
+  @media (min-width: 768px) {
+    .masthead h1, .masthead .h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+      padding: 0;
+    }
+    .masthead h1, .masthead .h1 {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+      letter-spacing: 0.8rem;
+    }
+    .masthead h2, .masthead .h2 {
+      max-width: 30rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  .btn {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1.25rem 2rem;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    border: 0;
+  }
+
+  /* About section */
+  .about-section {
+    padding: 10rem 0;
+  }
+  .about-section .featured-text {
+    padding: 2rem;
+  }
+  @media (min-width: 992px) {
+    .about-section .featured-text {
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid #007bff;
+    }
+  }
+  .about-section .about-text {
+    padding: 3rem;
+    font-size: 90%;
+  }
+  @media (min-width: 992px) {
+    .about-section .about-text {
+      padding: 5rem;
+    }
+  }
+
+/* Footer Section */
+
+.contact-section .row {
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.contact-section .card {
+    margin: 0 auto; /* Center cards horizontally */
+}
+
+.contact-section {
+    padding-top: 5rem;
+  }
+  .contact-section .card {
+    border: 0;
+    border-bottom: 0.25rem solid #007bff;
+  }
+  .contact-section .card h4, .contact-section .card .h4 {
+    font-size: 0.8rem;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+  }
+  .contact-section .card hr {
+    opacity: 1;
+    border-color: #007bff;
+    border-width: 0.25rem;
+    width: 3rem;
+  }
+  .contact-section .social {
+    margin-top: 5rem;
+  }
+  .contact-section .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .contact-section .social a:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-section .social a:active {
+    color: #fff;
+  }
+  
+  .footer {
+    padding: 5rem 0;
+  }
+
+
+  /* Resume Section */
+
+  .resume-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0; /* Adjust as needed */
+}
+
+.resume-image {
+    width: auto; /* Maintain aspect ratio */
+    max-width: 80%; /* Adjust the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 90vh; /* Limit height to 90% of the viewport height */
+    border: 1px solid #ddd; /* Optional: add a border */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.download-button {
+    margin-top: 20px; /* Space between image and button */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Button font size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume-image {
+        max-width: 90%; /* Use a smaller max-width on smaller screens */
+    }
+    .download-button {
+        font-size: 14px; /* Smaller font size for buttons on smaller screens */
+        padding: 8px 16px; /* Smaller padding for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-section {
+        margin: 20px auto; /* Reduce margin for smaller screens */
+    }
+    .resume-image {
+        max-width: 100%; /* Full width for very small screens */
+    }
+    .download-button {
+        font-size: 12px; /* Further reduce button font size */
+        padding: 6px 12px; /* Further reduce button padding */
+    }
+}
+
+/* Project Section (Style a) */
+.projects-section {
+    padding: 5rem 0;
+  }
+  .projects-section .featured-text {
+    padding: 2rem;
+  }
+  @media (min-width: 992px) {
+    .projects-section .featured-text {
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid #64a19d;
+    }
+  }
+  .projects-section .project-text {
+    padding: 3rem;
+    font-size: 90%;
+  }
+  @media (min-width: 992px) {
+    .projects-section .project-text {
+      padding: 5rem;
+    }
+  }
+
+/* Project Section (Style b) */
+.projects-section .featured-text {
+    padding: 2rem;
+}
+
+@media (min-width: 992px) {
+    .project2-section .featured-text {
+        padding: 0 2rem 0 0; /* Adjust padding to align text properly on the left */
+        border-right: 0.5rem solid #64a19d; /* Change to right border to separate text from image */
+    }
+}
+
+.project2-section .project-text {
+    padding: 3rem;
+    font-size: 90%;
+}
+
+@media (min-width: 992px) {
+    .project2-section .project-text {
+        padding: 5rem;
+    }
+}
+
+/* contact section */
+.signup-section {
+    padding: 10rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("https://i.ibb.co/0cSVLJH/bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .signup-section .form-signup input {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1.25rem 2rem;
+    height: auto;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    border: 0;
+  }
+
+
+
+
+
+
 
 
 
